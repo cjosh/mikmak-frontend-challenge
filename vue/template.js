@@ -37,10 +37,7 @@ Vue.component('carousel', {
     },
     template: `<div>
                 <h1 class="app-title">{{ title }}</h1>
-                <div v-if="!images">
-                    Please add images to use the carousel
-                </div>
-                <div v-else class="carousel">
+                <div class="carousel">
                     <div class="images">
                         <slide
                             v-for="(image, key) in images" 
