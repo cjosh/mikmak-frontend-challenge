@@ -3,49 +3,17 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Vue.js Counter</title>
+    <title>Vue.js Image Carousel</title>
     <script src="../lib/vue.js"></script>
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chango" rel="stylesheet">
   </head>
 
   <body>
-
     <div id="app">
-
-      <h1 class="app-title">{{ title }}</h1>
-
-      <div class="app-current-count">
-        {{ count }}
-      </div>
-
-      <div class="app-counter-buttons">
-        <button type="button" name="decrement" v-on:click="decrement">-</button>
-        <button type="button" name="increment" v-on:click="increment">+</button>
-      </div>
-
+      <carousel></carousel>
     </div>
-
-    <script type="text/javascript">
-
-      new Vue({
-        el: '#app',
-        data() {
-          return {
-            title: 'Vue.js Counter',
-            count: 0
-          }
-        },
-        methods: {
-          increment() {
-            this.count++
-          },
-          decrement() {
-            if (this.count > 0) this.count--
-          }
-        }
-      })
-
-    </script>
-
+    <script src="template.js"></script>
   </body>
 </html>
