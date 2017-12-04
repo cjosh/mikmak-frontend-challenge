@@ -6,7 +6,7 @@ const images = [
 ]
 
 const Slide = {
-    props: ['image', 'index'],
+    props: ['image'],
     template: `<img v-bind:src="image.url"/>`
 }
 
@@ -45,7 +45,6 @@ Vue.component('carousel', {
                         <slide
                             v-for="(image, key) in images" 
                             v-bind:image="image" 
-                            v-bind:index="key"
                             v-bind:class="{ active: key === active }">
                         </slide>
                     </div>
